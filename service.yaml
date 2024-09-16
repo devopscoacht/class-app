@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Sevice
+metadata:
+  name: class-app-service
+spec:
+  selector:
+    app: class-app
+  ports:
+     - protocal: TCP
+       port: 80
+       targetPort: 80
+  type: ClusterIP 

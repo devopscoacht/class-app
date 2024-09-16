@@ -1,0 +1,17 @@
+apiVersion: app/v1
+kind: Ingress
+metadata:
+  name: class-app-ingress
+spec: 
+  rules:
+  - host: classapp.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          services:
+            name: class-app-service
+            port:
+              number: 80
+  
